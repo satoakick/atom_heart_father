@@ -1,0 +1,14 @@
+"/var/log/nginx/access.log" "/var/log/nginx/error.log" {
+  missingok
+  notifempty
+  daily
+  rotate 7
+  create 644 root
+  compress
+  delaycompress
+  notifempty
+  sharedscripts
+  postrotate
+      [ ! -f <%= node[:nginx_build][:nginx_pid] %> ] || kill -USR1 `cat <%= node[:nginx_build][:nginx_pid] %>`
+  endscript
+}

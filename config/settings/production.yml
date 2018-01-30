@@ -1,0 +1,7 @@
+root_dir: /var/www/atom_heart_father
+aws:
+  cloudfront:
+    url: your.cloudfront.net
+  s3:
+    upload:
+      bucket: "production_bucket"

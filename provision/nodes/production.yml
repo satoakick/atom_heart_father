@@ -1,0 +1,19 @@
+host: atom-heart-father
+server:
+  user: vitaminc
+rbenv:
+  versions:
+    - 2.5.0
+  global: 2.5.0
+  gems:
+    - bundler
+nginx:
+  base_dir: /var/www/atom_heart_father
+  port: 80
+  worker_connections: 65535
+nginx_build:
+  build_user: ec2-user
+  nginx_version: 1.13.8
+  configure_options:
+    error-log-path: /var/log/nginx/error.log
+    http-log-path: /var/log/nginx/access.log

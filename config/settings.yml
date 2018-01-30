@@ -1,0 +1,5 @@
+root_dir: /Users/satoakick/dev/atom_heart_father # set as you like
+application_dir: /Users/satoakick/dev/atom_heart_father # set as you like
+unicorn:
+  backlog: 4096
+  worker_processes: 3
